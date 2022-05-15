@@ -1,4 +1,5 @@
-import NavbarLinks from "../NavbarLinks/NarbarLinks";
+import NavbarLinks from "../NavbarLinks";
+import NavbarMenu from "../NavbarMenu";
 
 export default function Navbar(props) {
 
@@ -12,6 +13,7 @@ export default function Navbar(props) {
     }
   
     return (
+      <>
       <div className="Header">
         <div className="Header-item f2">
           <a href="#" className="Header-link f4 d-flex flex-items-center">
@@ -27,5 +29,7 @@ export default function Navbar(props) {
           <img className="avatar" height="20" alt="@octocat" src="https://github.com/octocat.png" width="20"/>
         </div>
       </div>
+      <NavbarMenu links={["account","profile","settings"]}></NavbarMenu>
+      </>
     );
   }
