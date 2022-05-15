@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export default function NavbarLinks(props){
     return (
-        <div>
+        <>
             {
                 props.links.map(
                   link => <div className="Header-item f2">
@@ -10,6 +12,6 @@ export default function NavbarLinks(props){
                           </div>
                 )
             }
-        </div>
+        </>
     )
 }

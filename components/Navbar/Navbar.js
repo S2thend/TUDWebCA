@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NavbarLinks from "../NavbarLinks/NarbarLinks";
 
 export default function Navbar(props) {
 
@@ -22,15 +22,7 @@ export default function Navbar(props) {
         <div className="Header-item">
           <input type="search" className="form-control Header-input" />
         </div>
-        {
-          props.links.map(
-            link => <div className="Header-item f2">
-                        <Link href="#" >
-                          <a className="Header-link">{link}</a>
-                        </Link>
-                    </div>
-          )
-        }
+        <NavbarLinks links={["About", "Releases", "Team"]}></NavbarLinks>
         <div className="Header-item mr-0">
           <img className="avatar" height="20" alt="@octocat" src="https://github.com/octocat.png" width="20"/>
         </div>
