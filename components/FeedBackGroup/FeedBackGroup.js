@@ -24,6 +24,7 @@ export default function FeedBackGroup(){
 
     function handleSubmit(e){
         e.preventDefault()
+        console.log(rating)
 
         fetch(
             'http://localhost:3000/api/getFeedback', 

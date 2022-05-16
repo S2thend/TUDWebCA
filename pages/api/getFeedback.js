@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     client.connect();
     
     const text = 'INSERT INTO FeedBack(name, rating, message) VALUES($1, $2, $3) RETURNING *'
-    const values = [req.body["name"], req.body["rating"], req.body["message"]]
+    const values = [req.body["name"], req.body["rating"], req.body["comment"]]
     
     // async/await
     try {
