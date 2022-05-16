@@ -1,6 +1,6 @@
 import StarRating from "../StarRating/StarRating"
 
-export default function(){
+export default function FeedBackGroup(){
     return(
         <form>
             <div className="form-group">
