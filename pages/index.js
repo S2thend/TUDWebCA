@@ -5,6 +5,41 @@ import FeedBackGroup from '../components/FeedBackGroup/FeedBackGroup'
 import CommentBox from '../components/CommentBox/CommentBox'
 import Layout from '../components/Layout/Layout'
 
+
+import { Client } from 'pg'
+
+
+export async function getServerSideProps(context) {
+  // const client = new Client({
+  //     connectionString: process.env.DATABASE_URL,
+  //     ssl: {
+  //       rejectUnauthorized: false
+  //   }
+  //   });
+    const client = new Client({
+      user: 'kkdlvzcdqkydli',
+      host: 'ec2-34-246-227-219.eu-west-1.compute.amazonaws.com',
+      database: 'ddt9k05bme6ecn',
+      password: 'd886d4b275fdc63d9b60683016619b732e48104af54448e18da258da3fd56550',
+      port: 5432,
+    })
+    
+    
+  client.connect();
+  client.query('SELECT name,rating,comment FROM feedback;', (err, res) => {
+        if (err) throw err;
+        for (let row of res.rows) {
+            console.log(JSON.stringify(row));
+        }
+        client.end();
+    });
+  return {
+    props: {
+      // props for your component
+    },
+  };
+}
+
 export default function Home() {
   return (
     <div>
