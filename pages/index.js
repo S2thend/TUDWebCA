@@ -10,12 +10,14 @@ import getComments from '../lib/comments'
 
 export async function getServerSideProps(context) {
 
-  const comments = getComments()
+  const res = await getComments()
+
+  // console.log(res)
   
   return {
     props: {
       // props for your component
-      // comments:comments
+      comments:res.rows
     },
   };
 }
