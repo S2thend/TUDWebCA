@@ -15,11 +15,16 @@ export default function FeedBackGroup(){
     function handleComment(e){
         setComment(e.target.value)
     }
+        
+    let rating
+
+    function getRating(r){
+        rating = r
+    }
 
     function handleSubmit(e){
         e.preventDefault()
 
-        const data = { username: 'example' };
         fetch(
             'http://localhost:3000/api/getFeedback', 
             {
@@ -27,7 +32,7 @@ export default function FeedBackGroup(){
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify({name:name, comment:comment, rating: rating}),
             }
         )
         .then(response => response.json())
@@ -38,11 +43,7 @@ export default function FeedBackGroup(){
             console.error('Error:', error);
         });
     }
-    
 
-    function getRating(rating){
-        console.log(rating)
-    }
 
     return(
         <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center mt-2">
