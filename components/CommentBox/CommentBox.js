@@ -1,25 +1,20 @@
 export default function CommentBox(){
 
+    const style = {cursor: 'pointer', width: '260px', maxHeight: '420px'}
+
     return(
         <div className="col-12 col-md-6 col-lg-4 col-xl-3 float-left">
-        <div className="Box hover-grow m-3 rounded-3 tooltipped tooltipped-n tooltipped-multiline mx-auto" aria-label="举例：
-" style="cursor:pointer; width: 260px; max-height: 420px;" onClick="go_to_post( &quot;/zh/work/javascript/2020/06/05/zh-web-dev-basic-dom.html&quot;)">
-          <div className="width-full avatar mb-md-0 d-flex flex-items-center color-bg-tertiary" style="height: 300px;">
-            
-              <p className="f0-light color-text-purple p-3">前端开发基础知识-什么是dom</p>
-            
-          </div>
-          <div className="Box-body css-truncate css-truncate-overflow p-2 h2">
-            <a className="" href="/zh/work/javascript/2020/06/05/zh-web-dev-basic-dom.html">
-              前端开发基础知识-什么是dom
-            </a>
-          </div>
-          <div className="Box-body css-truncate css-truncate-overflow p-2 f4">
-            <p className="">
-              2020-06-05 00:43:26 +0800
-            </p>
-          </div>
-        </div>
+            <div class="Box hover-grow m-3 rounded-3 mx-auto overflow-hidden" style={style}>
+            <div class="Box-header">
+                <h3 class="Box-title">
+                Box title
+                <span class="Counter Counter--gray">12</span>
+                </h3>
+            </div>
+            <div class="Box-body">
+                Box body 的撒旦 adsfdas dsadas sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das das as asd sadsa d sad sa dasd sad asd sad assd as s sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd as as asd sadsa d sad sa dasd sad asd sad assd as s sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd as
+            </div>
+            </div>
       </div>
     )
 }

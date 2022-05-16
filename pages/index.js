@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import Navbar from  '../components/Navbar'
 import FeedBackGroup from '../components/FeedBackGroup/FeedBackGroup'
+import CommentBox from '../components/CommentBox/CommentBox'
 
 export default function Home() {
   return (
@@ -13,6 +14,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar></Navbar>
+      <div class="clearfix" style={{minHeight: "50vh"}}>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+        <CommentBox></CommentBox>
+      </div>
       <FeedBackGroup></FeedBackGroup>
     </div>
   )
