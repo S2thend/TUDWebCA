@@ -10,12 +10,11 @@ export default function NavbarMenu (props){
                 <nav className={props.status=="open"?"menu d-lg-none":"menu d-lg-none d-none"} aria-label="Person settings"  style={{"width":"100vw"}}> 
                     {
                         props.links.map(
-                            link => <Link href={link.value}>
+                            link => <Link href={link.value} key={link.name}>
                                         <a 
                                             className="menu-item f2" 
                                             aria-current={router.pathname==link.value?"page":"false"}
                                             style={ {textAlign: 'center'} }
-                                            key={link.name}
                                         >
                                             {link.name}
                                         </a>
