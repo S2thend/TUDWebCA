@@ -14,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar></Navbar>
+      <FeedBackGroup/>
       <div class="clearfix" style={{minHeight: "50vh"}}>
         <CommentBox></CommentBox>
         <CommentBox></CommentBox>
@@ -26,7 +27,6 @@ export default function Home() {
         <CommentBox></CommentBox>
         <CommentBox></CommentBox>
       </div>
-      <FeedBackGroup></FeedBackGroup>
     </div>
   )
 }
