@@ -35,7 +35,7 @@ export default function Home({comments}) {
         <div className="clearfix" style={{minHeight: "50vh"}}>
           {
             comments.map(
-              el => <CommentBox name={el.name} rating={el.rating+"/5"} message={el.message} />
+              el => <CommentBox name={el.name} rating={el.rating+"/5"} message={el.message} key={el.message}/>
             )
           }
         </div>
