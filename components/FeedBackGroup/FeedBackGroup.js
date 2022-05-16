@@ -47,7 +47,7 @@ export default function FeedBackGroup(){
 
 
     return(
-        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center mt-2" style={{maxWidth:"400px"}}>
+        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center m-5" style={{maxWidth:"400px"}}>
             <div className="Box-body">
             <form>
                 <div className="form-group">
