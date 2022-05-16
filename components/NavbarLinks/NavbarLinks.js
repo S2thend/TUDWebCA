@@ -5,7 +5,7 @@ export default function NavbarLinks(props){
         <>
             {
                 props.links.map(
-                  link => <div className="Header-item f2">
+                  link => <div className="Header-item f2 d-none d-lg-inline-block" key={link}>
                               <Link href="#" >
                                 <a className="Header-link">{link}</a>
                               </Link>
