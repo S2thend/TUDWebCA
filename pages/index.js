@@ -33,16 +33,11 @@ export default function Home({comments}) {
       <Layout>
         <FeedBackGroup/>
         <div className="clearfix" style={{minHeight: "50vh"}}>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
-          <CommentBox></CommentBox>
+          {
+            comments.map(
+              el => <CommentBox name={el.name} rating={el.rating} message={el.message} />
+            )
+          }
         </div>
       </Layout>
     </div>

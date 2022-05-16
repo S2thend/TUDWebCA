@@ -1,4 +1,4 @@
-export default function CommentBox(){
+export default function CommentBox({name,rating,message}){
 
     const style = {cursor: 'pointer', width: '260px', maxHeight: '420px'}
 
@@ -7,12 +7,12 @@ export default function CommentBox(){
             <div className="Box hover-grow m-3 rounded-3 mx-auto overflow-hidden" style={style}>
             <div className="Box-header">
                 <h3 className="Box-title">
-                Box title
-                <span className="Counter Counter--gray">12</span>
+                {name}
+                <span className="Counter Counter--gray">{rating}</span>
                 </h3>
             </div>
             <div className="Box-body">
-                Box body 的撒旦 adsfdas dsadas sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das das as asd sadsa d sad sa dasd sad asd sad assd as s sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd as as asd sadsa d sad sa dasd sad asd sad assd as s sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd ass sadas sad sad asd as dsa dsadsadsadas as das das as da sa  asd das as asd sadsa d sad sa dasd sad asd sad assd as
+                {message}
             </div>
             </div>
       </div>
