@@ -5,6 +5,7 @@ export default function FeedBackGroup(){
 
     const [name, setName] = useState("")
     const [comment, setComment] = useState("")
+    const [invite, setInvite] = useState("")
 
     function handleName(e){
         e.preventDefault()
@@ -15,6 +16,10 @@ export default function FeedBackGroup(){
     function handleComment(e){
         setComment(e.target.value)
     }
+
+    function handleInvite(e){
+        setInvite(e.target.value)
+    }
         
     let rating
 
@@ -23,26 +28,27 @@ export default function FeedBackGroup(){
     }
 
     function handleSubmit(e){
-        e.preventDefault()
-        console.log(rating)
-
-        fetch(
-            'http://localhost:3000/api/getFeedback', 
-            {
-                method: 'POST', // or 'PUT'
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({name:name, comment:comment, rating: rating}),
-            }
-        )
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        // e.preventDefault()
+        // console.log(rating)
+        if(name!=""&&rating!=undefined&&comment!=""&&invite!=""){
+            fetch(
+                'http://localhost:3000/api/getFeedback', 
+                {
+                    method: 'POST', // or 'PUT'
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({name:name, comment:comment, rating: rating, invite:invite}),
+                }
+            )
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
     }
 
 
@@ -73,6 +79,14 @@ export default function FeedBackGroup(){
                     </div>
                     <div className="form-group-body">
                     <textarea className="form-control" value={comment} id="example-textarea" maxLength="2000" onChange={handleComment} required></textarea>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <div className="form-group-header">
+                    <label htmlFor="example-text">Invite Code</label>
+                    </div>
+                    <div className="form-group-body">
+                    <input className="form-control" type="text" value={invite} id="example-text" onChange={handleInvite} required/>
                     </div>
                 </div>
                 <button className="btn btn-primary btn-block" onClick={handleSubmit}>
