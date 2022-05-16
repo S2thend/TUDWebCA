@@ -18,7 +18,27 @@ export default function FeedBackGroup(){
 
     function handleSubmit(e){
         e.preventDefault()
+
+        const data = { username: 'example' };
+        fetch(
+            'http://localhost:3000/api/getFeedback', 
+            {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
+    
 
     function getRating(rating){
         console.log(rating)
@@ -33,7 +53,7 @@ export default function FeedBackGroup(){
                     <label htmlFor="example-text">Example Text</label>
                     </div>
                     <div className="form-group-body">
-                    <input className="form-control" type="text" value={name} id="example-text" onChange={handleName} />
+                    <input className="form-control" type="text" value={name} id="example-text" onChange={handleName} required/>
                     </div>
                 </div>
 
@@ -50,7 +70,7 @@ export default function FeedBackGroup(){
                     <label htmlFor="example-textarea">Example Textarea</label>
                     </div>
                     <div className="form-group-body">
-                    <textarea className="form-control" value={comment} id="example-textarea" maxLength="2000" onChange={handleComment}></textarea>
+                    <textarea className="form-control" value={comment} id="example-textarea" maxLength="2000" onChange={handleComment} required></textarea>
                     </div>
                 </div>
                 <button className="btn btn-primary btn-block" onClick={handleSubmit}>
