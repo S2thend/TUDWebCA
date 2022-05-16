@@ -1,33 +1,30 @@
-import React from "react";
+import { useRouter } from 'next/router'
 
 
-export default class NavbarMenu extends React.Component{
-
-    constructor(props){
-        super(props)
-        this.state = {
-            current:"account",
-        }
-    }
+export default function NavbarMenu (props){
+    
+    
+    const router = useRouter()
+    console.log(router.pathname)
 
 
-    render(){
+
         return(
-                <nav className={this.props.status=="open"?"menu d-lg-none":"menu d-lg-none d-none"} aria-label="Person settings"  style={{"width":"100vw"}}> 
+                <nav className={props.status=="open"?"menu d-lg-none":"menu d-lg-none d-none"} aria-label="Person settings"  style={{"width":"100vw"}}> 
                     {
-                        this.props.links.map(
+                        props.links.map(
                             link => <a 
                                         className="menu-item f2" 
-                                        href="#url" 
-                                        aria-current={link==this.state.current?"page":"false"}
-                                        style={ {"text-align": 'center'} }
-                                        key={link}
+                                        href={link.value}
+                                        aria-current={router.pathname==link.value?"page":"false"}
+                                        style={ {textAlign: 'center'} }
+                                        key={link.name}
                                     >
-                                        {link}
+                                        {link.name}
                                     </a>
                         )
                     }
                 </nav>
         )
-    }
+
 }

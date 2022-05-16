@@ -2,8 +2,8 @@ import StarRating from "../StarRating/StarRating"
 
 export default function FeedBackGroup(){
     return(
-        <div class="Box Box--spacious col-6 mx-auto text-center m-5">
-            <div class="Box-body">
+        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center">
+            <div className="Box-body">
 
             <form>
                 <div className="form-group">
@@ -29,10 +29,10 @@ export default function FeedBackGroup(){
                     <label htmlFor="example-textarea">Example Textarea</label>
                     </div>
                     <div className="form-group-body">
-                    <textarea className="form-control" id="example-textarea"></textarea>
+                    <textarea className="form-control" id="example-textarea" maxLength="2000"></textarea>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block">
+                <button className="btn btn-primary btn-block">
                     Submit
                 </button>
             </form>

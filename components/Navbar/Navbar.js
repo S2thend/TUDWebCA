@@ -42,7 +42,7 @@ export default function Navbar(props) {
           </div>
         </div>
       </div>
-      <NavbarMenu links={["account","profile","settings"]} status={menuStatus}></NavbarMenu>
+      <NavbarMenu links={[{name:"Home", value:"/"},{name:"About", value:"/about"}]} status={menuStatus}></NavbarMenu>
       </>
     );
   }
