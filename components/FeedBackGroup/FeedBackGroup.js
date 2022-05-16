@@ -2,7 +2,7 @@ import StarRating from "../StarRating/StarRating"
 
 export default function FeedBackGroup(){
     return(
-        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center">
+        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center mt-2">
             <div className="Box-body">
 
             <form>
