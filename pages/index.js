@@ -26,7 +26,7 @@ export async function getServerSideProps(context) {
     
     
   client.connect();
-  client.query('SELECT name,rating,comment FROM feedback;', (err, res) => {
+  client.query('SELECT name,rating,message FROM FeedBack;', (err, res) => {
         if (err) throw err;
         for (let row of res.rows) {
             console.log(JSON.stringify(row));

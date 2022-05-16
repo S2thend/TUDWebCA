@@ -1,7 +1,6 @@
-
 import { Client } from 'pg'
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
     const client = new Client({
       connectionString: process.env.DATABASE_URL,
       ssl: {
@@ -11,8 +10,8 @@ export default function handler(req, res) {
     
     client.connect();
     
-    const text = 'INSERT INTO users(name, email) VALUES($1, $2) RETURNING *'
-    const values = ['brianc', 'brian.m.carlson@gmail.com']
+    const text = 'INSERT INTO FeedBack(name, rating, message) VALUES($1, $2, $3) RETURNING *'
+    const values = ['me', 5, 'i have rated this site']
     
     // async/await
     try {
