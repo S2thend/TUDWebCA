@@ -47,12 +47,12 @@ export default function FeedBackGroup(){
 
 
     return(
-        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center mt-2">
+        <div className="Box Box--spacious col-10 col-md-6 mx-auto text-center mt-2" style={{maxWidth:"400px"}}>
             <div className="Box-body">
             <form>
                 <div className="form-group">
                     <div className="form-group-header">
-                    <label htmlFor="example-text">Example Text</label>
+                    <label htmlFor="example-text">Your Name</label>
                     </div>
                     <div className="form-group-body">
                     <input className="form-control" type="text" value={name} id="example-text" onChange={handleName} required/>
@@ -61,7 +61,7 @@ export default function FeedBackGroup(){
 
                 <div className="form-group">
                     <div className="form-group-header">
-                    <label htmlFor="example-select">Example Select</label>
+                    <label htmlFor="example-select">Your Rating</label>
                     </div>
                     <div className="form-group-body">
                     <StarRating getRating={getRating}></StarRating>
@@ -69,7 +69,7 @@ export default function FeedBackGroup(){
                 </div>
                 <div className="form-group">
                     <div className="form-group-header">
-                    <label htmlFor="example-textarea">Example Textarea</label>
+                    <label htmlFor="example-textarea">Leave a comment</label>
                     </div>
                     <div className="form-group-body">
                     <textarea className="form-control" value={comment} id="example-textarea" maxLength="2000" onChange={handleComment} required></textarea>

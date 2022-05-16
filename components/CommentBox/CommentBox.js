@@ -8,7 +8,7 @@ export default function CommentBox({name,rating,message}){
             <div className="Box-header">
                 <h3 className="Box-title">
                 {name}
-                <span className="Counter Counter--gray">{rating}</span>
+                <span className="Counter Counter--gray ml-2">Rating: {rating}</span>
                 </h3>
             </div>
             <div className="Box-body">
